@@ -29,7 +29,11 @@ public class FileDemo {
 
     public static boolean newIssure() {
         int a = 10;
+        int c = 10;
 
+        int d = 10;
         return true;
     }
+
+
 }
