@@ -25,4 +25,11 @@ public class FileDemo {
         File target = new File("D:\\tmp\\target.txt");
         return sourceFile.renameTo(target);
     }
+
+
+    public static boolean newIssure() {
+        int a = 10;
+
+        return true;
+    }
 }
