@@ -32,6 +32,8 @@ public class FileDemo {
         int c = 10;
 
         int d = 10;
+        int f = 20;
+        int k = 50;
         return true;
     }
 
