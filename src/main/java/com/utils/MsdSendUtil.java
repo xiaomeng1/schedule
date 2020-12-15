@@ -19,7 +19,7 @@ public class MsdSendUtil {
     private static final String ACTION = "SendSms";
     private static final String ACCESS_KEY_ID = "LTAIMbftl02yQbDA";
     private static final String ACCESS_KEY_SECRET = "RuYlM0yFSvxYoJZwbDqx3DjgDmsmCC";
-    private static final String SIGN_NAME = "邓强";
+    private static final String SIGN_NAME = "小孟";
     private static final String TEMPLATE_CODE = "SMS_68170109";
 
     /**
