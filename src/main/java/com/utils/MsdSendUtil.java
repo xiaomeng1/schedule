@@ -17,8 +17,8 @@ public class MsdSendUtil {
 
     private static final String SEND_MSG_DOMAIN = "dysmsapi.aliyuncs.com";
     private static final String ACTION = "SendSms";
-    private static final String ACCESS_KEY_ID = "LTAIMbftl02yQbDA";
-    private static final String ACCESS_KEY_SECRET = "RuYlM0yFSvxYoJZwbDqx3DjgDmsmCC";
+    private static final String ACCESS_KEY_ID = "LTAI4GHepm5a3cw1guvtVMvL";
+    private static final String ACCESS_KEY_SECRET = "z9akzhGUm55gq9b0l8QBcBw5e3HtIl";
     private static final String SIGN_NAME = "小孟";
     private static final String TEMPLATE_CODE = "SMS_68170109";
 
@@ -58,7 +58,7 @@ public class MsdSendUtil {
      */
     private static Boolean sendMsg(String signName, String templateCode, String phoneNums, String templateParam) {
         System.setProperty("https.protocols", "TLSv1.2,TLSv1.1,SSLv3");
-        DefaultProfile profile = DefaultProfile.getProfile("default", ACCESS_KEY_ID, ACCESS_KEY_SECRET);
+        DefaultProfile profile = DefaultProfile.getProfile("cn-hangzhou", ACCESS_KEY_ID, ACCESS_KEY_SECRET);
         IAcsClient client = new DefaultAcsClient(profile);
 
         CommonRequest request = new CommonRequest();
@@ -67,6 +67,7 @@ public class MsdSendUtil {
         request.setDomain(SEND_MSG_DOMAIN);
         request.setVersion("2017-05-25");
         request.setAction(ACTION);
+        request.putQueryParameter("RegionId", "cn-hangzhou");
         request.putQueryParameter("SignName", signName);
         request.putQueryParameter("TemplateCode", templateCode);
         request.putQueryParameter("PhoneNumbers", phoneNums);
@@ -82,6 +83,10 @@ public class MsdSendUtil {
         }
 
         return false;
+    }
+
+    public static void main(String[] args) {
+        sendMsgForDefaultTemplate("17621203923","xiaomeng");
     }
 
 }
