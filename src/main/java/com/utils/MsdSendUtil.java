@@ -20,7 +20,7 @@ public class MsdSendUtil {
     private static final String ACCESS_KEY_ID = "LTAI4GHepm5a3cw1guvtVMvL";
     private static final String ACCESS_KEY_SECRET = "z9akzhGUm55gq9b0l8QBcBw5e3HtIl";
     private static final String SIGN_NAME = "小孟";
-    private static final String TEMPLATE_CODE = "SMS_68170109";
+    private static final String TEMPLATE_CODE = "SMS_210076868";
 
     /**
      * send msg by give the phone number and template param
@@ -31,7 +31,7 @@ public class MsdSendUtil {
      */
     public static Boolean sendMsgForDefaultTemplate(String phoneNum, String nameValue) {
 
-        return sendMsg(SIGN_NAME, TEMPLATE_CODE, phoneNum, "{\"name\":\"" + nameValue + "\"}");
+        return sendMsg(SIGN_NAME, TEMPLATE_CODE, phoneNum, "{\"username\":\"" + nameValue + "\"}");
     }
 
     /**
